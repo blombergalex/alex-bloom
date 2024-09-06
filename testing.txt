@@ -17,11 +17,16 @@ A minimum of 3 integration tests which MUST include
 - Test are coherent - a semi-experienced developer reading them should be able to understand what they are testing
 
   1: show all button -> make more items in project section show
-  2: hide button -> make items hide
-  3: add favourite -> favourite from project added to favouriteList
-  4: remove favourite -> favourite removed when project is un-favourited
+     hide button -> make items hide
+  2: add favourite -> favourite from project added to favouriteList
+     test that the right information goes from one spot to another, ie different favourites clicked appear in the list
+     remove favourite -> favourite removed when project is un-favourited
+  3: scroll to top - works on different parts of the page
 
-Submission:
+
+  QUESTION: integration test - 
+
+SUBMISSION
 A written proposal descripting the features & functionality of the application
 Screen shots are encouraged to clearly communicate what the application should do
 A link to a github repo that (in addition to the 'base' files created by your choice of react framework) contains:
@@ -29,7 +34,16 @@ A link to a github repo that (in addition to the 'base' files created by your ch
 one "ReadMe" file for your proposal​
 one test directory that contains all the tests you have written
 NO OTHER files should be included. Just a read me and tests inside a test dir​ectory
+ - PUBLIC folder with IMAGES FOLDER
+ - UTILS like types file and data
 
+ create new project:
+ - install testing stuff ie npm i after cloning original project to make sure the test configuration is done
+ - remove all components and contents of layout and home
+ - create __test__ folder in src folder and move all tests there
+ - git init - create repo - handin link to repo with tests, not link to live site
+    -- DO NOT hand in any components
+- readme with screen shots and explanation of how it works (ie Portfolio site, sections, favourite functionality (heart turns orange and favourite saved in favourites list that appears only when there are favourites), scroll top functionality)
 
 A presentation to the class of your application and how it works. Presentations will take place on Tuesday September 10. Presentations are mandatory, if you cannot be there you must submit a short video showing your site.
 

@@ -1,10 +1,23 @@
-import { screen, render } from "@testing-library/react";
+import { screen, render, fireEvent } from "@testing-library/react";
+import Home from "./page";
+import RootLayout from "./layout";
 
 describe("Checks that the home page content renders and work as expected", () => {
   it("Checks that the scrollToTop functionality work as expected");
-  // render page
+  render (
+    <RootLayout>
+    <Home />
+    </RootLayout>
+  )
+
+
+  const scrollButton = screen.queryAllByTestId("scroll-btn");
+  expect(scrollButton).not.toBeInTheDocument();
+
+
   // mock scrollEvent e.g. scrolling down to Connect component
-  // check that connect component enters in view
-  // mock click on scrollToTop button
-  // check that about component (at top) enters in view
+  // render page - expect scrollbutton (test-id 'scroll-btn').toBeInTheDocument()
+    // expect aboutComponent not to be visible (in document but not in view)
+  // mock click on scrollButton
+  // check that about component enters in view
 });

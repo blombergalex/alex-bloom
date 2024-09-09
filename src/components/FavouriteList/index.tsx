@@ -13,7 +13,7 @@ const FavouriteList = ({ favouriteIds, projects }: FavouriteListProps) => {
 
   return favouriteProjects.length > 0 ? (
     <div data-testid="favourite-list" className="flex flex-col m-6">
-      <h2 className="text-gray-200 max-w-fit text-center py-6 font-SansNarrow font-semi-bold text-lg md:text-2xl">
+      <h2 className="text-gray-200 text-center py-6 font-SansNarrow font-semi-bold text-lg md:text-2xl">
         Your favourites
       </h2>
       <ul className="max-w-sm">
@@ -25,6 +25,7 @@ const FavouriteList = ({ favouriteIds, projects }: FavouriteListProps) => {
           >
             <HeartIcon className={"w-6 h-6 text-amber-500 mr-1"} />
             <a
+              data-testid="website-link"
               href={project.websiteLink}
               target="_blank"
               rel="noopener noreferrer"

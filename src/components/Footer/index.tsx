@@ -17,7 +17,7 @@ const Footer = () => {
             href="mailto:blombergalexandras@gmail.com"
             className="flex items-center space-x-2 hover:text-gray-200"
           >
-            <EnvelopeIcon className="w-6 h-6 text-gray-300" />
+            <EnvelopeIcon className="w-6 h-6 text-gray-300 hover:text-gray-200" />
             <span>blombergalexandras@gmail.com</span>
           </a>
           <a
@@ -26,7 +26,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="flex items-center space-x-2 hover:text-gray-200"
           >
-            <UserPlusIcon className="w-6 h-6 text-gray-300" />
+            <UserPlusIcon className="w-6 h-6 text-gray-300 hover:text-gray-200" />
             <span>LinkedIn</span>
           </a>
         </div>

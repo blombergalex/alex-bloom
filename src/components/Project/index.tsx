@@ -38,14 +38,14 @@ const Project = ({
       </div>
       <div className="flex flex-col flex-grow p-4">
         <h3 className="text-lg text-black font-semibold mb-2">{title}</h3>
-        <p className="text-gray-700 mb-4 flex-grow">{description}</p>
-        <div className="flex flex-col md:flex-row md:justify-between md:items-center">
+        <p data-testid="description" className="text-gray-700 mb-4 flex-grow">{description}</p>
+        <div className="flex flex-row justify-between">
           <a
             data-testid="github-link"
             href={githubLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-amber-500 hover:underline mb-2"
+            className="text-amber-500 hover:underline"
           >
             See code in GitHub
           </a>
@@ -54,16 +54,16 @@ const Project = ({
             href={websiteLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-amber-500 hover:underline mb-2"
+            className="text-amber-500 hover:underline"
           >
             Visit website
           </a>
           <button
             onClick={() => onFavouriteToggle(id)}
-            className={`text-xl ${isFavourite ? "text-amber-500" : "text-gray-400"} transition-colors duration-300`}
+            className={`text-xl ${isFavourite ? "text-amber-500" : "text-gray-300"} transition-colors duration-300`}
             data-testid="favourite-btn"
           >
-            <HeartIcon className={"w-6 h-6"} />
+            <HeartIcon className={"w-6 h-6 hover:text-amber-500"} />
           </button>
         </div>
       </div>

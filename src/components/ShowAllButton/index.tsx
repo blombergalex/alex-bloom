@@ -7,7 +7,7 @@ type ShowAllButtonProps = {
 
 const ShowAllButton = ({ onShowAllToggle, showAll }: ShowAllButtonProps) => {
   return (
-    <div className="flex justify-end m-4">
+    <div className="flex justify-center m-4 lg:justify-end">
       <div
         data-testid="show-all-btn"
         onClick={onShowAllToggle}

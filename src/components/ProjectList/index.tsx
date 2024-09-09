@@ -18,13 +18,12 @@ const ProjectList = ({
 
   const handleShowAllToggle = () => {
     setShowAll(!showAll);
-    console.log("Show all before click:" + showAll);
   };
 
   const displayedProjects = showAll ? projectItems : projectItems.slice(0, 4);
 
   return (
-    <div className="flex flex-col m-4">
+    <div className="flex flex-col m-4 mx-auto">
       <div
         data-testid="project-list"
         className={`flex flex-wrap text-gray-200 

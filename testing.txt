@@ -16,17 +16,12 @@ A minimum of 3 integration tests which MUST include
 - Tests are relevant - complexity will NOT be rewarded.
 - Test are coherent - a semi-experienced developer reading them should be able to understand what they are testing
 
-  1: show all button -> make more items in project section show
-     hide button -> make items hide
-  2: add favourite -> favourite from project added to favouriteList
-     test that the right information goes from one spot to another, ie different favourites clicked appear in the list
-     remove favourite -> favourite removed when project is un-favourited
-  3: scroll to top - works on different parts of the page
+  1: show all button -> make more items in project section show ✅
+    : hide button -> make items hide
+  3: add favourite -> favourite from project added to favouriteList
+  4: remove favourite -> favourite removed when project is un-favourited
 
-
-  QUESTION: integration test - 
-
-SUBMISSION
+Submission:
 A written proposal descripting the features & functionality of the application
 Screen shots are encouraged to clearly communicate what the application should do
 A link to a github repo that (in addition to the 'base' files created by your choice of react framework) contains:

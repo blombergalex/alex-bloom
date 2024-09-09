@@ -8,3 +8,16 @@ export type ProjectType = {
   websiteLink: string;
   favourite: boolean
 }
+
+export type AboutMeType = {
+  start: string,
+  experience: string,
+  nextStep:string,
+  purpose: string,
+}
+
+export type ConnectType = {
+  connectText: string,
+  alt: string,
+  imgSrc: string
+}

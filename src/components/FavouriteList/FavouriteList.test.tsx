@@ -34,6 +34,13 @@ describe("FavouriteList component renders as expected", () => {
     expect(favouriteList).toBeInTheDocument(); 
   });
 
+  it("Checks that only favourite projects are listed", () => {
+    render(<FavouriteList favouriteIds={mockFavouriteIds} projects={mockProjects} />);
+    const favouriteProjectItems = screen.getAllByTestId("favourite-project");
+    expect(favouriteProjectItems).toHaveLength(1); 
+    expect(favouriteProjectItems[0]).toHaveTextContent("Project One");
+  });
+
   it("Checks for FavouriteList title", () => {
     render(<FavouriteList projects={mockProjects} favouriteIds={mockFavouriteIds}/>);
     const sectionTitle = screen.getByRole("heading", {
@@ -43,10 +50,15 @@ describe("FavouriteList component renders as expected", () => {
     expect(sectionTitle).toBeInTheDocument();
   });
 
-  it("Checks that only favourite projects are listed", () => {
-    render(<FavouriteList favouriteIds={mockFavouriteIds} projects={mockProjects} />);
-    const favouriteProjectItems = screen.getAllByTestId("favourite-project");
-    expect(favouriteProjectItems).toHaveLength(1); 
-    expect(favouriteProjectItems[0]).toHaveTextContent("Project One");
-  });
+  it("Checks for correct URL in FavouriteList item", () => {
+    render(<FavouriteList projects={mockProjects} favouriteIds={mockFavouriteIds}/>);
+    const favouriteProjectItem = screen.getByTestId("favourite-project");
+
+    const favouriteProjectLink = screen.getByTestId("website-link");
+    
+    expect(favouriteProjectLink).toHaveAttribute(
+      "href",
+      "https://vercel.project-one.com"  
+    )
+  })
 });

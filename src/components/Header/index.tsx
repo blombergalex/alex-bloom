@@ -4,9 +4,9 @@ const Header = () => {
   return (
     <div
       data-testid="header"
-      className="flex flex-col bg-hero-image mb-8 sm:pt-5"
+      className="flex flex-col sm:pt-5 "
     >
-      <h2 className="text-right font-flowers text-2xl tracking-wider opacity-40 text-gray-300 pb-6 p-3 mr-2 sm:text-4xl md:text-6xl md:m-6">
+      <h2 className="text-right font-flowers text-2xl tracking-wider opacity-60 text-gray-300 pb-6 p-3 mr-2 sm:text-4xl md:text-6xl md:m-6 animate-fade-in-down">
         Welcome to my portfolio
       </h2>
       <div className="flex justify-between items-end">
@@ -21,6 +21,7 @@ const Header = () => {
           className="h-28 w-auto md:h-56"
         />
       </div>
+      <div className="w-full border-b border-b-gray-300 border-solid mx-auto h-4 md:h-10"></div>
     </div>
   );
 };

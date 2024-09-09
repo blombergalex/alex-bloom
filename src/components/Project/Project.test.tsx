@@ -1,26 +1,28 @@
 import { screen, render, fireEvent } from "@testing-library/react";
 import Project from ".";
 
-describe("Checks project component has correct content and functionality", () => {
-  const mockData = {
-    id: "1",
-    title: "mockTitle",
-    imgSrc: "/images/mockimage.jpg",
-    alt: "Mockalt text for image",
-    description: "Here is a mockdescription of a project",
-    githubLink: "https://github.com/blombergalex/project",
-    websiteLink: "https://vercel.project.app",
-    favourite: false,
-  };
+const mockOnFavouriteToggle = () => {}
+const mockData = {
+  id: "1",
+  title: "Project title",
+  imgSrc: "/images/mockimage.jpg",
+  alt: "Mockalt text for image",
+  description: "Here is a mockdescription of a project",
+  githubLink: "https://github.com/blombergalex/project",
+  websiteLink: "https://vercel.project.app",
+  favourite: false,
+};
 
+describe("Project component has correct content and functionality", () => {
   it("Checks that the project component renders correctly", () => {
-    render(<Project {...mockData} />);
+    render(<Project {...mockData} onFavouriteToggle={mockOnFavouriteToggle} isFavourite={false} />);
     const project = screen.getByTestId("project");
     expect(project).toBeInTheDocument();
   });
 
-  it("Checks the project title is rendered correctly", () => {
-    render(<Project {...mockData} />);
+  it("Checks the project title renders correctly", () => {
+    render(<Project {...mockData} onFavouriteToggle={mockOnFavouriteToggle} isFavourite={false} />);
+    
     const projectTitle = screen.getByRole("heading", {
       level: 3,
       name: mockData.title,
@@ -29,8 +31,8 @@ describe("Checks project component has correct content and functionality", () =>
     expect(projectTitle).toBeInTheDocument();
   });
 
-  it("Checks that project has correct image", () => {
-    render(<Project {...mockData} />);
+  it("Checks that project image with correct URL", () => {
+    render(<Project {...mockData} onFavouriteToggle={mockOnFavouriteToggle} isFavourite={false} />);
 
     const projectImage = screen.getByRole("img", { name: mockData.alt });
     expect(projectImage).toBeInTheDocument();
@@ -41,17 +43,13 @@ describe("Checks project component has correct content and functionality", () =>
   });
 
   it("Checks the project description is rendered correctly", () => {
-    const mockDescription =
-      "This project was created using React and Next.js, two powerful JavaScript frameworks for building modern web applications. The project showcases a dynamic and interactive user interface that leverages React's component-based architecture and Next.js's server-side rendering capabilities to deliver fast, optimized performance.";
-
-    render(<Project {...mockData} />);
-    const projectDescription = screen.getByText(mockData.description);
-
+    render(<Project {...mockData} onFavouriteToggle={mockOnFavouriteToggle} isFavourite={false} />);
+    const projectDescription = screen.getByTestId("description");
     expect(projectDescription).toBeInTheDocument();
   });
 
-  it("Checks for links in project component", () => {
-    render(<Project {...mockData} />);
+  it("Checks that project links have correct URL and functionality", () => {
+    render(<Project {...mockData} onFavouriteToggle={mockOnFavouriteToggle} isFavourite={false} />);
     const githubLink = screen.getByTestId("github-link");
     const websiteLink = screen.getByTestId("website-link");
 
@@ -67,29 +65,27 @@ describe("Checks project component has correct content and functionality", () =>
   });
 
   it("Checks that favourite is saved in state on button click", () => {
-    render(<Project {...mockData} />);
+    const {rerender } = render(<Project {...mockData} onFavouriteToggle={mockOnFavouriteToggle} isFavourite={false} />);
     const favouriteButton = screen.getByTestId("favourite-btn");
     expect(favouriteButton).toBeInTheDocument();
-
     expect(favouriteButton.classList.contains("text-gray-400")).toBe(true);
+    
     fireEvent.click(favouriteButton);
-
+    rerender(<Project {...mockData} onFavouriteToggle={mockOnFavouriteToggle} isFavourite={true} />);
     const updatedFavouriteButton = screen.getByTestId("favourite-btn");
-    expect(favouriteButton.classList.contains("text-amber-500")).toBe(true);
+    expect(updatedFavouriteButton.classList.contains("text-amber-500")).toBe(true);
   });
 
   it("Checks that favourite state is removed on second button click", () => {
-    render(<Project {...mockData} />);
+    const { rerender } = render(<Project {...mockData} onFavouriteToggle={mockOnFavouriteToggle} isFavourite={true} />);
     const favouriteButton = screen.getByTestId("favourite-btn");
     expect(favouriteButton).toBeInTheDocument();
 
     expect(favouriteButton.classList.contains("text-amber-500")).toBe(true);
 
     fireEvent.click(favouriteButton);
-
+    rerender(<Project {...mockData} onFavouriteToggle={mockOnFavouriteToggle} isFavourite={false} />)
     const updatedFavouriteButton = screen.getByTestId("favourite-btn");
-    expect(updatedFavouriteButton.classList.contains("text-gray-400")).toBe(
-      true
-    );
+    expect(updatedFavouriteButton.classList.contains("text-gray-400")).toBe(true);
   });
 });

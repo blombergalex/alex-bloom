@@ -9,10 +9,10 @@ const Footer = () => {
       className="flex flex-col justify-center p-4 bg-amber-500 text-gray-300"
     >
       <div className="my-10 md:mx-10">
-        <h3 className="flex font-semibold font-SansNarrow text-lg mb-4">
+        <h3 className="flex font-semibold font-SansNarrow text-lg mb-4 md:text-xl">
           Say Hello
         </h3>
-        <div className="flex flex-col space-y-4">
+        <div className="flex flex-col space-y-4 text-sm md:text-lg">
           <a
             href="mailto:blombergalexandras@gmail.com"
             className="flex items-center space-x-2 hover:text-gray-200"

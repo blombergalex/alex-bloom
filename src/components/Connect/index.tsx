@@ -1,8 +1,32 @@
+'use client'
+
 import { ConnectType } from "@/utils/types";
 import { EnvelopeIcon, UserPlusIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import ContactForm from "../ContactForm"; 
+import { useState } from "react";
 
 const Connect = ({ connectText, imgSrc, alt }: ConnectType) => {
+
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+    const [formSubmitted, setFormSubmitted] = useState(false);
+  
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+    
+      const mailtoLink = `mailto:blombergalexandras@gmail.com?subject=New Message on your portfolio from ${email}&body=${encodeURIComponent(
+        message
+      )}`;
+    
+      window.location.href = mailtoLink;
+    
+      setFormSubmitted(true);
+    
+      setEmail("");
+      setMessage("");
+    };
+  
   return (
     <section
       data-testid="connect-section"
@@ -47,6 +71,15 @@ const Connect = ({ connectText, imgSrc, alt }: ConnectType) => {
                   className="max-w-32 h-auto rounded-full m-4"
                 />
               </div>
+        </div>
+        <div className="mt-6">
+            <ContactForm
+              email={email}
+              message={message}
+              setEmail={setEmail}
+              setMessage={setMessage}
+              handleSubmit={handleSubmit}
+            />
         </div>
       </div>
     </section>

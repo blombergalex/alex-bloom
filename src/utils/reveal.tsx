@@ -10,7 +10,7 @@ interface Props {
 
 const Reveal = ({ children, width = "fit-content" }: Props) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true }); // add intersectionObserver on this
+  const isInView = useInView(ref, { once: true }); 
 
   const mainControls = useAnimation();
 

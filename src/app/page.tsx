@@ -15,6 +15,7 @@ export default function Home() {
   const connectRef = useRef<HTMLDivElement>(null);
 
   const [activeSection, setActiveSection] = useState<"aboutMe" | "projects" | "connect">("aboutMe");
+  const [isProjectSectionVisible, setIsProjectSectionVisible] = useState<boolean>(false);
 
   const aboutMeInView = useInView(aboutMeRef);
   const projectInView = useInView(projectRef);
@@ -27,8 +28,25 @@ export default function Home() {
       setActiveSection("projects");
     } else if (connectInView) {
       setActiveSection("connect");
+
     }
   }, [aboutMeInView, projectInView, connectInView]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const projectTop = projectRef.current?.getBoundingClientRect().top ?? 0;
+      const windowHeight = window.innerHeight;
+      console.log("scroll position: " + window.scrollY)
+      console.log("top of project section at " + projectTop)
+      setIsProjectSectionVisible(projectTop < windowHeight && projectTop > 0);
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [projectRef]);
+  
 
   const handleScrollToSection = (section: "aboutMe" | "projects" | "connect") => {
     const ref = section === "aboutMe" ? aboutMeRef : section === "projects" ? projectRef : connectRef;
@@ -45,6 +63,7 @@ export default function Home() {
   return (
     <>
       <Navigation onScrollToSection={handleScrollToSection} activeSection={activeSection} />
+      {isProjectSectionVisible && <p data-testid="visibleSignal" className="text-white fixed ">Project section is visible</p>}
       <div className="max-w-4xl mx-auto ">
         <div
           ref={aboutMeRef}

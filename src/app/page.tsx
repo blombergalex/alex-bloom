@@ -36,9 +36,13 @@ export default function Home() {
     const handleScroll = () => {
       const projectTop = projectRef.current?.getBoundingClientRect().top ?? 0;
       const windowHeight = window.innerHeight;
-      console.log("scroll position: " + window.scrollY)
-      console.log("top of project section at " + projectTop)
-      setIsProjectSectionVisible(projectTop < windowHeight && projectTop > 0);
+      console.log("scroll Y position: " + window.scrollY)
+      console.log("position of projectTop " + projectTop)
+      if(projectTop < 815 && projectTop > -1600) {
+        setIsProjectSectionVisible(true);
+      } else {
+        setIsProjectSectionVisible(false);
+      }
     };
     
     window.addEventListener('scroll', handleScroll);
@@ -63,7 +67,7 @@ export default function Home() {
   return (
     <>
       <Navigation onScrollToSection={handleScrollToSection} activeSection={activeSection} />
-      {isProjectSectionVisible && <p data-testid="visibleSignal" className="text-white fixed ">Project section is visible</p>}
+      {isProjectSectionVisible && <p data-testid="visibleSignal" className="text-white bg-amber-700 fixed z-40">Project section is visible</p>}
       <div className="max-w-4xl mx-auto ">
         <div
           ref={aboutMeRef}

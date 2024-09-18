@@ -67,7 +67,13 @@ export default function Home() {
   return (
     <>
       <Navigation onScrollToSection={handleScrollToSection} activeSection={activeSection} />
-      {isProjectSectionVisible && <p data-testid="visibleSignal" className="text-white bg-amber-700 fixed z-40">Project section is visible</p>}
+    {/* {isProjectSectionVisible && <p data-testid="visibleSignal" className="text-white bg-amber-700 fixed z-40">Project section is visible</p>} */}
+        <p 
+          data-testid="visibleSignal" 
+          className={`${isProjectSectionVisible ? "fixed z-40 bg-amber-700" : "text-black -z-40"} `}
+        >
+          Project section is visible
+        </p>
       <div className="max-w-4xl mx-auto ">
         <div
           ref={aboutMeRef}

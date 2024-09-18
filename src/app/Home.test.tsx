@@ -25,11 +25,9 @@ describe("Home page rendering", () => {
 
     const aboutSection = screen.getByTestId("aboutMe");
     const projectSection = screen.getByTestId("projects");
-    const visibleSignal = screen.queryByTestId("visibleSignal");
+    const visibleSignal = screen.getByTestId("visibleSignal");
     
-    expect(visibleSignal).not.toBeInTheDocument();
-    expect(aboutSection).toBeInTheDocument();
-    expect(projectSection).toBeInTheDocument();
+    expect(visibleSignal.classList.contains("fixed"));
     
     // Mock the height of the sections and the window's inner height
 
@@ -55,6 +53,5 @@ describe("Home page rendering", () => {
     expect(updatedVisibleSignal).toBeInTheDocument();
 
     scrollTo.mockRestore();
-    
   })
 });

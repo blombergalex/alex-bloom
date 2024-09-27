@@ -53,4 +53,4 @@ Pay attention to the submission. I should be able to clone your project, run npm
 
 
 
-It is advisable to create one project to develop the application and tests, then when you are finished copy JUST the test to another project for submission.
+It is advisable to create one project to develop the application and tests, then when you are finished copy JUST the test to another project for submission

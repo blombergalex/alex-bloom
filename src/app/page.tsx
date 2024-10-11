@@ -68,7 +68,7 @@ export default function Home() {
           data-active={connectInView ? "true" : "false"}
           className={`${connectInView ? "opacity-100" : "opacity-0"} transition-opacity duration-[2000ms]`}
         >
-          <Connect {...connect} />
+          <Connect {...connect} onScrollToSection={handleScrollToSection}/>
         </div>
       </div>
     </>

@@ -42,16 +42,6 @@ const Navigation: React.FC<NavigationProps> = ({ onScrollToSection, activeSectio
           <ul data-testid="mobile-nav-list" className="space-y-5 w-full text-center">
             <li
               onClick={() => {
-                onScrollToSection("aboutMe");
-                toggleMenu();
-              }}
-              className={`w-full animate-fade-in-up ${activeSection === "aboutMe" ? "underline decoration-amber-500 underline-offset-8" : ""}`}
-              data-testid="mobile-aboutMe"
-            >
-              About Me
-            </li>
-            <li
-              onClick={() => {
                 onScrollToSection("projects");
                 toggleMenu();
               }}
@@ -59,6 +49,16 @@ const Navigation: React.FC<NavigationProps> = ({ onScrollToSection, activeSectio
               data-testid="mobile-projects"
             >
               Projects
+            </li>
+            <li
+              onClick={() => {
+                onScrollToSection("aboutMe");
+                toggleMenu();
+              }}
+              className={`w-full animate-fade-in-up ${activeSection === "aboutMe" ? "underline decoration-amber-500 underline-offset-8" : ""}`}
+              data-testid="mobile-aboutMe"
+            >
+              About Me
             </li>
             <li
               onClick={() => {
@@ -76,18 +76,18 @@ const Navigation: React.FC<NavigationProps> = ({ onScrollToSection, activeSectio
 
       <ul data-testid="desktop-nav" className="hidden md:flex font-SansNarrow pr-10 justify-end gap-10 py-4 px-2 border-b border-b-gray-300">
         <li
-          data-testid="desktop-aboutMe"
-          className={`cursor-pointer text-lg ${activeSection === "aboutMe" ? "border-b-2 border-amber-500" : "hover:border-b-2 border-amber-500"}`}
-          onClick={() => onScrollToSection("aboutMe")}
-        >
-          About Me
-        </li>
-        <li
           data-testid="desktop-projects"
           className={`cursor-pointer text-lg ${activeSection === "projects" ? "border-b-2 border-amber-500" : "hover:border-b-2 border-amber-500"}`}
           onClick={() => onScrollToSection("projects")}
         >
           Projects
+        </li>
+        <li
+          data-testid="desktop-aboutMe"
+          className={`cursor-pointer text-lg ${activeSection === "aboutMe" ? "border-b-2 border-amber-500" : "hover:border-b-2 border-amber-500"}`}
+          onClick={() => onScrollToSection("aboutMe")}
+        >
+          About Me
         </li>
         <li
           data-testid="desktop-connect"

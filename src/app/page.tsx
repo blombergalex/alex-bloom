@@ -47,20 +47,20 @@ export default function Home() {
       <Navigation onScrollToSection={handleScrollToSection} activeSection={activeSection} />
       <div className="max-w-4xl mx-auto ">
         <div
-          ref={aboutMeRef}
-          data-testid="aboutMe"
-          data-active={aboutMeInView ? "true" : "false"}
-          className={`min-h-screen ${aboutMeInView ? "opacity-100" : "opacity-0"} transition-opacity duration-[1000ms]`}
-        >
-          <AboutMe {...about} />
-        </div>
-        <div
           ref={projectRef}
           data-testid="projects"
           data-active={projectInView ? "true" : "false"}
           className={`min-h-screen ${projectInView ? "opacity-100" : "opacity-0"} transition-opacity duration-[2500ms]`}
         >
           <ProjectSection projects={projects} />
+        </div>
+        <div
+          ref={aboutMeRef}
+          data-testid="aboutMe"
+          data-active={aboutMeInView ? "true" : "false"}
+          className={`min-h-screen ${aboutMeInView ? "opacity-100" : "opacity-0"} transition-opacity duration-[1000ms]`}
+        >
+          <AboutMe {...about} />
         </div>
         <div
           ref={connectRef}

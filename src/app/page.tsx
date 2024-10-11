@@ -52,7 +52,7 @@ export default function Home() {
           data-active={projectInView ? "true" : "false"}
           className={`min-h-screen ${projectInView ? "opacity-100" : "opacity-0"} transition-opacity duration-[2500ms]`}
         >
-          <ProjectSection projects={projects} />
+          <ProjectSection projects={projects} onScrollToSection={handleScrollToSection}/>
         </div>
         <div
           ref={aboutMeRef}

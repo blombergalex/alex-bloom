@@ -7,9 +7,10 @@ import { ProjectType } from "@/utils/types";
 
 type ProjectSectionProps = {
   projects: ProjectType[];
+  onScrollToSection: (section:"projects") => void;
 };
 
-const ProjectSection = ({ projects }: ProjectSectionProps) => {
+const ProjectSection = ({ projects, onScrollToSection }: ProjectSectionProps) => {
   const [favouriteProjects, setFavouriteProjects] = useState<string[]>([]);
 
   const handleFavouriteToggle = (id: string) => {
@@ -25,7 +26,10 @@ const ProjectSection = ({ projects }: ProjectSectionProps) => {
       datatest-id="project-section"
       className="flex flex-col justify-center md:p-14"
     >
-      <h2 className="text-gray-200 bg-black text-center py-6 font-SansNarrow font-semi-bold text-lg md:text-2xl sticky top-[0] z-10 md:py-12 md:top-[61px]">
+      <h2 
+        className="text-gray-200 bg-black text-center py-6 font-SansNarrow font-semi-bold text-lg md:text-2xl sticky top-[0] z-10 md:py-12 md:top-[61px] cursor-pointer"
+        onClick={() => onScrollToSection("projects")}
+      >
         My Projects
       </h2>
       <ProjectList

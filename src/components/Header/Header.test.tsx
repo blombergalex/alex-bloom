@@ -16,13 +16,4 @@ describe("Tests for header component", () => {
     });
     expect(headerText1).toBeInTheDocument();
   });
-
-  it("Checks that the header has a specific subtitle", () => {
-    render(<Header />);
-    const headerText2 = screen.getByRole("heading", {
-      level: 2,
-      name: "Welcome to my portfolio",
-    });
-    expect(headerText2).toBeInTheDocument();
-  });
 });

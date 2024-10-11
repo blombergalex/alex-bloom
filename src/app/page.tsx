@@ -7,6 +7,7 @@ import Navigation from "@/components/Navigation";
 import { about, connect, projects } from "@/utils/data";
 import { useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { ArrowDownCircleIcon } from "@heroicons/react/24/outline";
 
 export default function Home() {
   
@@ -45,7 +46,7 @@ export default function Home() {
   return (
     <>
       <Navigation onScrollToSection={handleScrollToSection} activeSection={activeSection} />
-      <div className="max-w-4xl mx-auto ">
+      <div className="max-w-4xl mx-auto">
         <div
           ref={projectRef}
           data-testid="projects"
@@ -53,6 +54,7 @@ export default function Home() {
           className={`min-h-screen ${projectInView ? "opacity-100" : "opacity-0"} transition-opacity duration-[2500ms]`}
         >
           <ProjectSection projects={projects} onScrollToSection={handleScrollToSection}/>
+          <ArrowDownCircleIcon onClick={() => handleScrollToSection("aboutMe")} className="h-6 w-6 text-gray-400 mx-auto cursor-pointer" />
         </div>
         <div
           ref={aboutMeRef}
@@ -61,6 +63,7 @@ export default function Home() {
           className={`min-h-screen ${aboutMeInView ? "opacity-100" : "opacity-0"} transition-opacity duration-[1000ms]`}
         >
           <AboutMe {...about} onScrollToSection={handleScrollToSection}/>
+          <ArrowDownCircleIcon onClick={() => handleScrollToSection("connect")} className="h-6 w-6 text-gray-400 mx-auto cursor-pointer" />
         </div>
         <div
           ref={connectRef}

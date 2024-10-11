@@ -60,7 +60,7 @@ export default function Home() {
           data-active={aboutMeInView ? "true" : "false"}
           className={`min-h-screen ${aboutMeInView ? "opacity-100" : "opacity-0"} transition-opacity duration-[1000ms]`}
         >
-          <AboutMe {...about} />
+          <AboutMe {...about} onScrollToSection={handleScrollToSection}/>
         </div>
         <div
           ref={connectRef}

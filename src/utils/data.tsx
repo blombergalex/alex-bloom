@@ -34,6 +34,19 @@ export const projects: ProjectType[] = [
   },
   {
     id: uuidv4(),
+    title: "Parking Time Sweden",
+    date: "June 2024",
+    imgSrc: "/images/parking-time.png",
+    alt: "Snapshot of the website Parking Time Sweden, showcasing its hero image and unique selling points.",
+    description:
+      "Frontend Developers at Futuregames worked with UI/UX and Project Management students to give Parking Time Sweden a new face. Learning to work with the client and bringing feedback from demos into development. Created with React, Next.js, Tailwind and next-intl for internationalization. ",
+      githubLink:
+      "https://github.com/Diyako-Qadri/parking-time-sweden-ab/tree/main",
+    websiteLink: "https://parking-time-sweden-ab.vercel.app",
+    favourite: false,
+  },
+  {
+    id: uuidv4(),
     title: "My Portfolio",
     date: "September 2024",
     imgSrc: "/images/portfolio.png",
@@ -46,7 +59,7 @@ export const projects: ProjectType[] = [
   },
   {
     id: uuidv4(),
-    title: "Music Library 2.0",
+    title: "The Music Library 2.0",
     date: "August 2024",
     imgSrc: "/images/music-library2.0.png",
     alt: "Snapshot of The Music Library 2.0, showing an artist search and displaying listen previews from Spotify",
@@ -54,19 +67,6 @@ export const projects: ProjectType[] = [
       "The Music Library 2.0 is a remake of my earlier creation The Music Library. In this version, the user can enter a search of an artist, and the most matched result is displayed along with up to ten of the artist's most played albums on Spotify. Use of the following was practiced: React, Vite, TypeScript, API data fetching and MUI's Material UI library.",
     githubLink: "https://github.com/blombergalex/music-library2.0",
     websiteLink: "https://music-library2-0.vercel.app",
-    favourite: false,
-  },
-  {
-    id: uuidv4(),
-    title: "Parking Time Sweden",
-    date: "June 2024",
-    imgSrc: "/images/parking-time.png",
-    alt: "Snapshot of the website Parking Time Sweden, showcasing its hero image and unique selling points.",
-    description:
-      "In this project me and my frontend development peers worked with UX designers and a project manager to give Parking Time Sweden a new face and improved user experience. Created with React, Next.js, Tailwind and next-intl for internationalization. The project took place over four intense sprints, where we brought feedback during client demos further into development every week.",
-    githubLink:
-      "https://github.com/Diyako-Qadri/parking-time-sweden-ab/tree/main",
-    websiteLink: "https://parking-time-sweden-ab.vercel.app",
     favourite: false,
   },
   {

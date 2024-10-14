@@ -12,6 +12,7 @@ const mockData = {
   githubLink: "https://github.com/blombergalex/project",
   websiteLink: "https://vercel.project.app",
   favourite: false,
+  techs: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
 };
 
 describe("Project component has correct content and functionality", () => {
@@ -69,7 +70,7 @@ describe("Project component has correct content and functionality", () => {
     const {rerender} = render(<Project {...mockData} onFavouriteToggle={mockOnFavouriteToggle} isFavourite={false} />);
     const favouriteButton = screen.getByTestId("favourite-btn");
     expect(favouriteButton).toBeInTheDocument();
-    expect(favouriteButton.classList.contains("text-gray-300")).toBe(true);
+    expect(favouriteButton.classList.contains("text-gray-700")).toBe(true);
     
     fireEvent.click(favouriteButton);
     rerender(<Project {...mockData} onFavouriteToggle={mockOnFavouriteToggle} isFavourite={true} />);
@@ -87,6 +88,6 @@ describe("Project component has correct content and functionality", () => {
     fireEvent.click(favouriteButton);
     rerender(<Project {...mockData} onFavouriteToggle={mockOnFavouriteToggle} isFavourite={false} />)
     const updatedFavouriteButton = screen.getByTestId("favourite-btn");
-    expect(updatedFavouriteButton.classList.contains("text-gray-300")).toBe(true);
+    expect(updatedFavouriteButton.classList.contains("text-gray-700")).toBe(true);
   });
 });

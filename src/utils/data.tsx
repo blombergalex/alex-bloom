@@ -31,6 +31,7 @@ export const projects: ProjectType[] = [
     githubLink:"https://github.com/blombergalex/food-booth",
     websiteLink:"https://food-booth.vercel.app/",
     favourite: false,
+    techs: ["React", "Next.js", "Tailwind CSS", "Typescript", "API data fetching", "useContext"],
   },
   {
     id: uuidv4(),
@@ -39,11 +40,12 @@ export const projects: ProjectType[] = [
     imgSrc: "/images/parking-time.png",
     alt: "Snapshot of the website Parking Time Sweden, showcasing its hero image and unique selling points.",
     description:
-      "Frontend Developers at Futuregames worked with UI/UX and Project Management students to give Parking Time Sweden a new face. Learning to work with the client and bringing feedback from demos into development. Created with React, Next.js, Tailwind and next-intl for internationalization. ",
+      "Frontend Developers at Futuregames worked with UI/UX and Project Management students to give Parking Time Sweden a new face. Learning to work with the client and bringing feedback from demos into development.",
       githubLink:
       "https://github.com/Diyako-Qadri/parking-time-sweden-ab/tree/main",
     websiteLink: "https://parking-time-sweden-ab.vercel.app",
     favourite: false,
+    techs: ["React", "Next.js", "Tailwind CSS", "Next-intl", "Scrum", "Jira"],
   },
   {
     id: uuidv4(),
@@ -56,6 +58,7 @@ export const projects: ProjectType[] = [
     githubLink: "https://github.com/blombergalex/alex-bloom",
     websiteLink: "https://alex-bloom.vercel.app/",
     favourite: false,
+    techs: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
   },
   {
     id: uuidv4(),
@@ -68,6 +71,7 @@ export const projects: ProjectType[] = [
     githubLink: "https://github.com/blombergalex/music-library2.0",
     websiteLink: "https://music-library2-0.vercel.app",
     favourite: false,
+    techs:  ["React", "Vite", "TypeScript", "Tailwind CSS", "Material UI", "API data fetching"],
   },
   {
     id: uuidv4(),
@@ -80,6 +84,7 @@ export const projects: ProjectType[] = [
     githubLink: "https://github.com/blombergalex/the-music-library",
     websiteLink: "https://the-music-library.netlify.app/",
     favourite: false,
+    techs: ["React", "Vite", "CSS Modules"],
   },
   {
     id: uuidv4(),
@@ -92,6 +97,7 @@ export const projects: ProjectType[] = [
     githubLink: "https://github.com/blombergalex/junglejam",
     websiteLink: "https://blombergalex.github.io/junglejam/",
     favourite: false,
+    techs: ["HTML", "CSS", "JavaScript", "API data fetching"],
   },
   {
     id: uuidv4(),
@@ -104,6 +110,7 @@ export const projects: ProjectType[] = [
     githubLink: "https://github.com/blombergalex/wonderflora",
     websiteLink: "https://wonderflora.onrender.com/",
     favourite: false,
+    techs: ["EJS", "CSS", "JavaScript"],
   },
   {
     id: uuidv4(),
@@ -116,5 +123,6 @@ export const projects: ProjectType[] = [
     githubLink: "https://github.com/blombergalex/song-game",
     websiteLink: "https://blombergalex.github.io/song-game/",
     favourite: false,
+    techs: ["HTML", "CSS", "JavaScript"],
   },
 ];

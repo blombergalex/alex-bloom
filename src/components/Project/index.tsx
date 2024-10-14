@@ -16,6 +16,7 @@ const Project = ({
   description,
   githubLink,
   websiteLink,
+  techs,
   onFavouriteToggle,
   isFavourite,
 }: ProjectProps) => {
@@ -23,7 +24,7 @@ const Project = ({
     <div
       key={id}
       data-testid="project"
-      className="flex flex-col bg-amber-100 rounded-lg shadow-lg overflow-hidden border border-gray-200 m-2 pt-4 min-h-[585px] max-w-[370px] max-[420px]:w-[320px]"
+      className="flex flex-col bg-amber-100 rounded-lg shadow-lg overflow-hidden border border-gray-200 m-2 pt-4 min-h-[585px] max-w-[370px] max-[420px]:w-[320px] cursor-default"
     >
       <div className="flex justify-center">
         <div className="relative w-[340px] h-56 max-[420px]:w-[300px]">
@@ -45,6 +46,12 @@ const Project = ({
         <p data-testid="description" className="text-gray-700 my-2 flex-grow">
           {description}
         </p>
+        <div className="flex flex-wrap text-gray-700 text-sm mb-3">
+          {techs && 
+            techs.map((item, index) => (
+              <p key={index} className="px-1 font-semibold border border-1 border-gray-700 m-1 hover:scale-110 cursor-default transition-all">{item}</p>
+            ))}
+        </div>
         <div className="flex flex-row justify-between">
           <a
             data-testid="github-link"

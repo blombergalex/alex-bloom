@@ -8,6 +8,7 @@ export type ProjectType = {
   githubLink: string;
   websiteLink: string;
   favourite: boolean;
+  techs: string[];
 };
 
 export type AboutMeType = {

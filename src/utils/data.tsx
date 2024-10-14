@@ -27,11 +27,11 @@ export const projects: ProjectType[] = [
     imgSrc:"/images/food-booth.png",
     alt:"Snapshot of The Food Booth",
     description: 
-      "The Food Booth is a recipe generator created with the Meal DB API. The user can log in, browse recipes in different categories and save them to their profile. Technologies used: Next.js, Tailwind CSS, TypeScript.",
+      "The Food Booth is an interactive recipe generator built using the Meal DB API. Users can log in, browse recipes by categories and save favourites to their profile. I utilized TypeScript for type safety and the useContext hook to manage user information across pages.",
     githubLink:"https://github.com/blombergalex/food-booth",
     websiteLink:"https://food-booth.vercel.app/",
     favourite: false,
-    techs: ["React", "Next.js", "Tailwind CSS", "Typescript", "API data fetching", "useContext"],
+    techs: ["React", "Next.js", "Tailwind CSS", "Typescript", "API data fetching"],
   },
   {
     id: uuidv4(),
@@ -39,8 +39,8 @@ export const projects: ProjectType[] = [
     date: "June 2024",
     imgSrc: "/images/parking-time.png",
     alt: "Snapshot of the website Parking Time Sweden, showcasing its hero image and unique selling points.",
-    description:
-      "Frontend Developers at Futuregames worked with UI/UX and Project Management students to give Parking Time Sweden a new face. Learning to work with the client and bringing feedback from demos into development.",
+    description: 
+    "I participated in a collaborative project where students at Futuregames created a new website for Parking Time Sweden. I carry with me the experience of integrating feedback from client demos into the development process and the efficient workflow enabled by Scrum.",
       githubLink:
       "https://github.com/Diyako-Qadri/parking-time-sweden-ab/tree/main",
     websiteLink: "https://parking-time-sweden-ab.vercel.app",
@@ -53,12 +53,11 @@ export const projects: ProjectType[] = [
     date: "September 2024",
     imgSrc: "/images/portfolio.png",
     alt: "Snapshot of frontend developer portfolio created by Alexandra Blomberg",
-    description:
-      "This portfolio marks my first project working with unit and integration tests. I learned to use Jest and React Testing Library to set up the tests, and built the components based on them. One of the best takeaways from this project is discovering that I enjoy testing and the control it gives of the development process. Created with React, Next.js, TypeScript and Tailwind CSS.",
+    description: "This portfolio represents my first experience writing unit and integration tests. I used Jest and React Testing Library to establish the tests and built the components accordingly. The key takeaway from this project was realizing my enjoyment of testing and the control it brings to the development process.",
     githubLink: "https://github.com/blombergalex/alex-bloom",
     websiteLink: "https://alex-bloom.vercel.app/",
     favourite: false,
-    techs: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+    techs: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Jest", "React Testing Library"],
   },
   {
     id: uuidv4(),
@@ -67,7 +66,7 @@ export const projects: ProjectType[] = [
     imgSrc: "/images/music-library2.0.png",
     alt: "Snapshot of The Music Library 2.0, showing an artist search and displaying listen previews from Spotify",
     description:
-      "The Music Library 2.0 is a remake of my earlier creation The Music Library. In this version, the user can enter a search of an artist, and the most matched result is displayed along with up to ten of the artist's most played albums on Spotify. Use of the following was practiced: React, Vite, TypeScript, API data fetching and MUI's Material UI library.",
+      "The Music Library 2.0 is a remake of my earlier creation The Music Library. In this version, the user can enter a search of an artist and the most matched result is displayed along with up to ten of the artist's most played albums on Spotify.",
     githubLink: "https://github.com/blombergalex/music-library2.0",
     websiteLink: "https://music-library2-0.vercel.app",
     favourite: false,
@@ -79,8 +78,7 @@ export const projects: ProjectType[] = [
     date: "April 2024",
     imgSrc: "/images/music-library.png",
     alt: "Snapshot of app The Music Library showcasing some recommendations of sweet albums",
-    description:
-      "This is my first React creation where I expanded my understanding of the core React concepts of functional components, props, and state. Created with React, Vite and using CSS modules for the styling. I enjoyed learning to store the data in objects and effectively mapping over them to turn them into albums on the user's end.",
+    description: "This is my first time working with React. I established an understanding of the core React concepts; functional components, props, and state. I enjoyed learning to store the data in objects and mapping over them to turn them into albums on the user's end.",
     githubLink: "https://github.com/blombergalex/the-music-library",
     websiteLink: "https://the-music-library.netlify.app/",
     favourite: false,
@@ -92,8 +90,7 @@ export const projects: ProjectType[] = [
     date: "February 2024",
     imgSrc: "/images/jungle-jam.png",
     alt: "Snapshot of API data fetching app Jungle Jam",
-    description:
-      "Jungle Jam is my first creation getting data from an external source and where I began to understand how much one can do in frontend development. In this app the user enters a search of an animal, triggering an API call, and is presented with facts on the requested animal. Created with HTML, CSS and JavaScript.",
+    description: "Jungle Jam marks my first time using data from an external source. The user enters a search of an animal, triggering an API call, and is presented with facts on the requested animal.",
     githubLink: "https://github.com/blombergalex/junglejam",
     websiteLink: "https://blombergalex.github.io/junglejam/",
     favourite: false,
@@ -105,12 +102,11 @@ export const projects: ProjectType[] = [
     date: "February 2024",
     imgSrc: "/images/wonderflora.png",
     alt: "Snapshot of EJS app Wonderflora",
-    description:
-      "Wonderflora is a floral shop where I practiced routing and using EJS templates. Thanks to this project I can say that I love how easy it is to create routes with Next.js. Technologies used for Wonderflora are EJS, CSS and JavaScript.",
+    description: "Wonderflora is a floral shop where I practiced routing in Express and using EJS templates. Thanks to this project, setting up routes with Next.js feels like a walk in the park compared to routing with Express.",
     githubLink: "https://github.com/blombergalex/wonderflora",
     websiteLink: "https://wonderflora.onrender.com/",
     favourite: false,
-    techs: ["EJS", "CSS", "JavaScript"],
+    techs: ["EJS", "CSS", "JavaScript", "Express"],
   },
   {
     id: uuidv4(),
@@ -119,7 +115,7 @@ export const projects: ProjectType[] = [
     imgSrc: "/images/hey-babareeba.png",
     alt: "Snapshot of my song game Hey Babareeba",
     description:
-      "Hey Babareeba is a song game and my first vanilla JavaScript creation. It's a game where the user has to guess the name of the songs played, one word at a time. In the making of this game I gained an understanding of the fundamentals of Javascript while continuing to develop my skills with HTML and CSS.",
+      "Hey Babareeba is my first vanilla JavaScript creation. It's a song game where the user has to guess the name of the songs played, one word at a time. In the making of this game I gained an understanding of the fundamentals of Javascript while continuing to develop my skills with HTML and CSS.",
     githubLink: "https://github.com/blombergalex/song-game",
     websiteLink: "https://blombergalex.github.io/song-game/",
     favourite: false,

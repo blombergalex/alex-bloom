@@ -22,6 +22,18 @@ export const connect: ConnectType = {
 export const projects: ProjectType[] = [
   {
     id: uuidv4(),
+    title: "The Food Booth",
+    date: "October 2024",
+    imgSrc:"/images/food-booth.png",
+    alt:"Snapshot of The Food Booth",
+    description: 
+      "The Food Booth is a recipe generator created with the Meal DB API. The user can log in, browse recipes in different categories and save them to their profile. Technologies used: Next.js, Tailwind CSS, TypeScript.",
+    githubLink:"https://github.com/blombergalex/food-booth",
+    websiteLink:"https://food-booth.vercel.app/",
+    favourite: false,
+  },
+  {
+    id: uuidv4(),
     title: "My Portfolio",
     date: "September 2024",
     imgSrc: "/images/portfolio.png",

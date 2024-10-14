@@ -9,7 +9,6 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        flowers: ['"Send Flowers"', 'cursive'],
         SansNarrow: ['"PT Sans Narrow"'],
       },
       keyframes: {

@@ -1,4 +1,4 @@
-import { HeartIcon } from "@heroicons/react/20/solid";
+import { HeartIcon, ArrowTopRightOnSquareIcon } from "@heroicons/react/20/solid";
 import { ProjectType } from "@/utils/types";
 import Image from "next/image";
 
@@ -49,32 +49,36 @@ const Project = ({
         <div className="flex flex-wrap text-gray-700 text-sm mb-3">
           {techs && 
             techs.map((item, index) => (
-              <p key={index} className="px-1 font-semibold border border-1 border-gray-700 m-1 hover:scale-110 cursor-default transition-all">{item}</p>
-            ))}
+              <p key={index} className="px-1 font-semibold border border-1 border-gray-700 m-1">{item}</p>
+          ))}
         </div>
-        <div className="flex flex-row justify-between">
-          <a
-            data-testid="github-link"
-            href={githubLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-amber-500 hover:underline"
-          >
-            See code in GitHub
-          </a>
-          <a
-            data-testid="website-link"
-            href={websiteLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-amber-500 hover:underline"
-          >
-            Visit website
-          </a>
+        <div className="flex flex-row">
+          <div className="flex space-x-3">
+            <a
+              data-testid="website-link"
+              href={websiteLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-1 text-amber-500 hover:scale-105 hover:underline transition-all"
+            >
+              <p>Live project</p>
+              <ArrowTopRightOnSquareIcon className="h-5"/>
+            </a>
+            <a
+              data-testid="github-link"
+              href={githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-1 text-black hover:scale-105 hover:underline transition-all"
+            >
+              <p>Source code</p>
+              <ArrowTopRightOnSquareIcon className="h-5"/>
+            </a>
+          </div>
           <button
             onClick={() => onFavouriteToggle(id)}
             data-testid="favourite-btn"
-            className={`text-xl ${isFavourite ? "text-amber-500" : "text-gray-300"} transition-colors duration-300 w-6 h-6 lg:hover:text-amber-500`}
+            className={`text-xl ml-auto ${isFavourite ? "text-amber-500" : "text-gray-700"} transition-colors duration-300 w-6 h-6 lg:hover:text-amber-500`}
           >
             <HeartIcon  />
           </button>

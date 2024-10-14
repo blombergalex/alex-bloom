@@ -3,13 +3,13 @@ import { v4 as uuidv4 } from "uuid";
 
 export const about: AboutMeType = {
   start:
-    "My curiosity for coding was sparked by seeing friends work in development. I began learning through online courses and quickly realized how much enjoy it. A year later, I started my formal education in frontend development. I've always loved puzzles and problem solving so discovering coding feels like finding a gold mine in which I am thrilled to continue digging.",
+    "My curiosity for coding was sparked by seeing friends work in development. I began learning through online courses and quickly fell in love with the nature of it; problem solving with direct feedback. A year later, I started my formal education in frontend development at Futuregames in Stockholm.",
   experience:
-    "So far in my journey I've worked with React, TypeScript, Next.js, Vite, and CSS frameworks like SASS, Tailwind, and MUI. I implement responsive web design in all my projects to ensure a smooth and intuitive interface across all devices. Git is an essential tool that brings control and efficiency in my work as I've grown increasingly comfortable with its power. I love playing around with API data fetching and have experience working within Scrum teams through sprints.",
+    "So far in my journey I've worked with React, TypeScript, Next.js and CSS frameworks like SASS, Tailwind, and MUI. I have experience integrating REST APIs and developing unit and integration tests. Team projects taught me the power of Scrum for efficiency, and Git is an essential tool that brings structure and control in my work.",
   nextStep:
-    "As I near the completion of my studies, I'm excited for the next phase of my career. Thanks to the continual learning this field offers, I look forward to pursuing opportunities that allow me to further develop my coding skills. My goal is to join a collaborative team where I can apply my current knowledge and have the space and mentorship to continue growing.",
+    "As my studies are coming to an end, I'm looking forward to the next phase of my career, starting with a 23-week internship from January 2025! I am currently seeking a position in a collaborative team where my eye for detail and ability to quickly learn new technologies are valued, while I continue to grow as a developer.",
   purpose:
-    "This page is designed to give you a glimpse into my journey by showcasing some of the projects that I've worked on. In the making of this portfolio, I learned to write unit and integration tests using Jest and React Testing Library. I discovered that I enjoy testing and it has become an area of development that I want to explore further in my career.",
+    "In the making of this project, I learned to write unit and integration tests and discovered that I enjoy the thorough planning that they require. I look forward to exploring testing further during my internship, and if that opportunity doesn't arise, I'm committed to enhancing my testing skills throughout my career.",
 };
 
 export const connect: ConnectType = {

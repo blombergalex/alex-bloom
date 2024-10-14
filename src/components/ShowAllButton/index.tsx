@@ -11,7 +11,7 @@ const ShowAllButton = ({ onShowAllToggle, showAll }: ShowAllButtonProps) => {
       <div
         data-testid="show-all-btn"
         onClick={onShowAllToggle}
-        className="cursor-pointer w-fit text-amber-500 bg-transparent border-2 rounded-md p-2 border-amber-500"
+        className="cursor-pointer w-fit text-amber-500 bg-transparent border-2 rounded-md p-2 border-amber-500 hover:bg-amber-500 hover:text-gray-200 transition-all"
       >
         {showAll ? "Show less projects" : "Show all projects"}
       </div>

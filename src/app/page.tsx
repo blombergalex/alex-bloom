@@ -54,7 +54,7 @@ export default function Home() {
           className={`min-h-screen ${projectInView ? "opacity-100" : "opacity-0"} transition-opacity duration-[2500ms]`}
         >
           <ProjectSection projects={projects} onScrollToSection={handleScrollToSection}/>
-          <ArrowDownCircleIcon onClick={() => handleScrollToSection("aboutMe")} className="h-6 w-6 text-gray-400 mx-auto cursor-pointer" />
+          <ArrowDownCircleIcon onClick={() => handleScrollToSection("aboutMe")} className="h-6 w-6 text-gray-400 mx-auto cursor-pointer hover:text-white transition-all" />
         </div>
         <div
           ref={aboutMeRef}
@@ -63,7 +63,7 @@ export default function Home() {
           className={`min-h-screen ${aboutMeInView ? "opacity-100" : "opacity-0"} transition-opacity duration-[1000ms]`}
         >
           <AboutMe {...about} onScrollToSection={handleScrollToSection}/>
-          <ArrowDownCircleIcon onClick={() => handleScrollToSection("connect")} className="h-6 w-6 text-gray-400 mx-auto cursor-pointer" />
+          <ArrowDownCircleIcon onClick={() => handleScrollToSection("connect")} className="h-6 w-6 text-gray-400 mx-auto cursor-pointer hover:text-white transition-all" />
         </div>
         <div
           ref={connectRef}

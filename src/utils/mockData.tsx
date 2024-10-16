@@ -26,6 +26,7 @@ export const mockProjects: ProjectType[] = [
     githubLink: "https://mock.github.com/project-1",
     websiteLink: "https://project-1.com",
     favourite: false,
+    techs: ["React", "Next.js", "Tailwind CSS", "Typescript"],
   },
   {
     id: "2",
@@ -37,6 +38,7 @@ export const mockProjects: ProjectType[] = [
     githubLink: "https://mock.github.com/project-2",
     websiteLink: "https://project-2.com",
     favourite: false,
+    techs: ["React", "Next.js", "Tailwind CSS", "Typescript"],
   },
   {
     id: "3",
@@ -48,6 +50,7 @@ export const mockProjects: ProjectType[] = [
     githubLink: "https://mock.github.com/project-3",
     websiteLink: "https://project-3.com",
     favourite: false,
+    techs: ["React", "Next.js", "Tailwind CSS", "Typescript"],
   },
   {
     id: "4",
@@ -59,6 +62,7 @@ export const mockProjects: ProjectType[] = [
     githubLink: "https://mock.github.com/project-4",
     websiteLink: "https://project-4.com",
     favourite: false,
+    techs: ["React", "Next.js", "Tailwind CSS", "Typescript"],
   },
   {
     id: "5",
@@ -70,6 +74,7 @@ export const mockProjects: ProjectType[] = [
     githubLink: "https://mock.github.com/project-5",
     websiteLink: "https://project-5.com",
     favourite: false,
+    techs: ["React", "Next.js", "Tailwind CSS", "Typescript"],
   },
   {
     id: "6",
@@ -81,6 +86,7 @@ export const mockProjects: ProjectType[] = [
     githubLink: "https://mock.github.com/project-6",
     websiteLink: "https://project-6.com",
     favourite: false,
+    techs: ["React", "Next.js", "Tailwind CSS", "Typescript"],
   },
   {
     id: "7",
@@ -92,5 +98,6 @@ export const mockProjects: ProjectType[] = [
     githubLink: "https://mock.github.com/project-7",
     websiteLink: "https://project-7.com",
     favourite: false,
+    techs: ["React", "Next.js", "Tailwind CSS", "Typescript"],
   },
 ];

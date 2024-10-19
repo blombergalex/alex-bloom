@@ -12,7 +12,8 @@ const mockProjects: ProjectType[] = [
     description: "Description for project one.",
     githubLink: "https://github.com/blombergalex/project-one",
     websiteLink: "https://vercel.project-one.com",
-    favourite: true
+    favourite: true,
+    techs:['React', 'Typescript', 'Tailwind CSS'],
   },
   {
     id: "2",
@@ -23,7 +24,8 @@ const mockProjects: ProjectType[] = [
     description: "Description for project two.",
     githubLink: "https://github.com/blombergalex/project-two",
     websiteLink: "https://vercel.project-two.com",
-    favourite: false
+    favourite: false,
+    techs:['React', 'Typescript', 'Tailwind CSS'],
   }
 ];
 

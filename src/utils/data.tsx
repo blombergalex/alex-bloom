@@ -55,7 +55,7 @@ export const projects: ProjectType[] = [
     alt: "Snapshot of frontend developer portfolio created by Alexandra Blomberg",
     description: "This portfolio represents my first experience writing unit and integration tests. I used Jest and React Testing Library to establish the tests and built the components accordingly. The key takeaway from this project was realizing my enjoyment of testing and the control it brings to the development process.",
     githubLink: "https://github.com/blombergalex/alex-bloom",
-    websiteLink: "https://alex-bloom.vercel.app/",
+    websiteLink: "https://alexblom.vercel.app/",
     favourite: false,
     techs: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Jest", "React Testing Library"],
   },

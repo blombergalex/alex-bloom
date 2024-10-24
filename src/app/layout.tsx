@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="w-screen h-full m-0">
+    <html lang="en" className="w-full h-full m-0">
       <body className="flex flex-col w-full min-h-screen bg-black">
       <Header />
         <div className="flex-grow">

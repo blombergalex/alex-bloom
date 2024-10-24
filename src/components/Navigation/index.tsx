@@ -19,7 +19,7 @@ const Navigation: React.FC<NavigationProps> = ({ onScrollToSection, activeSectio
   };
 
   return (
-    <nav className="sticky top-0 w-screen bg-black text-gray-200 z-50">
+    <nav className="sticky top-0 w-full bg-black text-gray-200 z-50">
       <div className="flex p-2 md:hidden">
         <button
           data-testid="open-menu-btn"

@@ -1,5 +1,30 @@
-A portfolio project built with Next.js, React, Tailwind CSS. Unit and integration tests created with Jest and React Testing Library. 
+# Alex Bloom - Portfolio
 
-The purpose of this project was to learn the basis of creating unit and integration tests. 
-I wanter to create a platform in which I introduce myself and display my projects.
-The site consists of an introduction section where I tell about my story becoming a developer, following that is the projects section where the user is able to favourite any projects they like. Favourited projects are displayed in a Favourite projects list, where the user can click on the title to get to the site of the deployed project. Last but not least there is the Connect section, where my contact details are found. 
+A personal portfolio website built with Next.js, React, Tailwind CSS, and TypeScript. The purpose of this project was to learn the fundamentals of creating unit and integration tests, while building a platform to introduce myself and showcase my projects.
+
+## Features
+
+- About Me: An introduction section where I share my journey to becoming a developer
+- Projects Section: Displays my projects with the ability for users to favorite them
+- Favorite Projects: A separate list showing the user's favorited projects
+- Connect: Information on how to reach me for collaborations or job opportunities
+
+## Technologies 
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Jest
+- React Testing Library
+- Framer Motion for animations
+
+## Install and run
+
+- git clone https://github.com/blombergalex/alex-bloom.git
+- cd alex-bloom
+- npm install
+- npm run dev
+
+## Run tests
+npm run test

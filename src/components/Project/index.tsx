@@ -1,11 +1,11 @@
-import { HeartIcon, ArrowTopRightOnSquareIcon } from "@heroicons/react/20/solid";
-import { ProjectType } from "@/utils/types";
-import Image from "next/image";
+import { HeartIcon, ArrowTopRightOnSquareIcon } from '@heroicons/react/20/solid'
+import { ProjectType } from '@/utils/types'
+import Image from 'next/image'
 
 type ProjectProps = ProjectType & {
-  onFavouriteToggle: (id: string) => void;
-  isFavourite: boolean;
-};
+  onFavouriteToggle: (id: string) => void
+  isFavourite: boolean
+}
 
 const Project = ({
   id,
@@ -17,6 +17,7 @@ const Project = ({
   githubLink,
   websiteLink,
   techs,
+  reportLink,
   onFavouriteToggle,
   isFavourite,
 }: ProjectProps) => {
@@ -41,16 +42,31 @@ const Project = ({
       <div className="flex flex-col flex-grow p-4">
         <div className="flex justify-between font-semibold">
           <h3 className="text-lg text-black">{title}</h3>
-          <p className="text-gray-700 text-xs mt-2">{date}</p>  
+          <p className="text-gray-700 text-xs mt-2">{date}</p>
         </div>
         <p data-testid="description" className="text-gray-700 my-2 flex-grow">
           {description}
+          {reportLink && (
+            <a
+              href={reportLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-amber-500 hover:underline ml-1"
+            >
+              Read my full report on the process.
+            </a>
+          )}
         </p>
         <div className="flex flex-wrap text-gray-700 text-sm mb-3">
-          {techs && 
+          {techs &&
             techs.map((item, index) => (
-              <p key={index} className="px-1 font-semibold border border-1 border-gray-700 m-1">{item}</p>
-          ))}
+              <p
+                key={index}
+                className="px-1 font-semibold border border-1 border-gray-700 m-1"
+              >
+                {item}
+              </p>
+            ))}
         </div>
         <div className="flex flex-row">
           <div className="flex space-x-3">
@@ -62,7 +78,7 @@ const Project = ({
               className="flex items-center space-x-1 text-amber-500 hover:scale-105 hover:underline transition-all"
             >
               <p>Live project</p>
-              <ArrowTopRightOnSquareIcon className="h-5"/>
+              <ArrowTopRightOnSquareIcon className="h-5" />
             </a>
             <a
               data-testid="github-link"
@@ -72,20 +88,20 @@ const Project = ({
               className="flex items-center space-x-1 text-black hover:scale-105 hover:underline transition-all"
             >
               <p>Source code</p>
-              <ArrowTopRightOnSquareIcon className="h-5"/>
+              <ArrowTopRightOnSquareIcon className="h-5" />
             </a>
           </div>
           <button
             onClick={() => onFavouriteToggle(id)}
             data-testid="favourite-btn"
-            className={`text-xl ml-auto ${isFavourite ? "text-amber-500" : "text-gray-700"} transition-colors duration-300 w-6 h-6 lg:hover:text-amber-500`}
+            className={`text-xl ml-auto ${isFavourite ? 'text-amber-500' : 'text-gray-700'} transition-colors duration-300 w-6 h-6 lg:hover:text-amber-500`}
           >
-            <HeartIcon  />
+            <HeartIcon />
           </button>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Project;
+export default Project

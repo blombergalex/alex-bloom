@@ -39,6 +39,7 @@ export const projects: ProjectType[] = [
       'Typescript',
       'Google Maps Javascript API',
       'Supabase',
+      'Vercel',
     ],
     reportLink:
       'https://drive.google.com/file/d/1J_A-Ew2kt3eyFIP_RjTiPEkjv2RbMAsg/view?usp=drive_link',
@@ -59,7 +60,8 @@ export const projects: ProjectType[] = [
       'Next.js',
       'Tailwind CSS',
       'Typescript',
-      'API data fetching',
+      'API integration',
+      'Vercel',
     ],
   },
   {
@@ -74,7 +76,15 @@ export const projects: ProjectType[] = [
       'https://github.com/Diyako-Qadri/parking-time-sweden-ab/tree/main',
     websiteLink: 'https://parking-time-sweden-ab.vercel.app',
     favourite: false,
-    techs: ['React', 'Next.js', 'Tailwind CSS', 'Next-intl', 'Scrum', 'Jira'],
+    techs: [
+      'React',
+      'Next.js',
+      'Tailwind CSS',
+      'Next-intl',
+      'Scrum',
+      'Jira',
+      'Vercel',
+    ],
   },
   {
     id: uuidv4(),
@@ -94,6 +104,7 @@ export const projects: ProjectType[] = [
       'Tailwind CSS',
       'Jest',
       'React Testing Library',
+      'Vercel',
     ],
   },
   {
@@ -113,7 +124,8 @@ export const projects: ProjectType[] = [
       'TypeScript',
       'Tailwind CSS',
       'Material UI',
-      'API data fetching',
+      'API integration',
+      'Vercel',
     ],
   },
   {
@@ -127,20 +139,20 @@ export const projects: ProjectType[] = [
     githubLink: 'https://github.com/blombergalex/the-music-library',
     websiteLink: 'https://the-music-library.netlify.app/',
     favourite: false,
-    techs: ['React', 'Vite', 'CSS Modules'],
+    techs: ['React', 'Vite', 'CSS Modules', 'Netlify'],
   },
   {
     id: uuidv4(),
     title: 'Jungle Jam',
     date: 'February 2024',
     imgSrc: '/images/jungle-jam.png',
-    alt: 'Snapshot of API data fetching app Jungle Jam',
+    alt: 'Snapshot of API integrated app Jungle Jam',
     description:
       'Jungle Jam marks my first time using data from an external source. The user enters a search of an animal, triggering an API call, and is presented with facts on the requested animal.',
     githubLink: 'https://github.com/blombergalex/junglejam',
     websiteLink: 'https://blombergalex.github.io/junglejam/',
     favourite: false,
-    techs: ['HTML', 'CSS', 'JavaScript', 'API data fetching'],
+    techs: ['HTML', 'CSS', 'JavaScript', 'API integration', 'Github Pages'],
   },
   {
     id: uuidv4(),
@@ -153,7 +165,7 @@ export const projects: ProjectType[] = [
     githubLink: 'https://github.com/blombergalex/wonderflora',
     websiteLink: 'https://wonderflora.onrender.com/',
     favourite: false,
-    techs: ['EJS', 'CSS', 'JavaScript', 'Express'],
+    techs: ['EJS', 'CSS', 'JavaScript', 'Express', 'Render'],
   },
   {
     id: uuidv4(),
@@ -166,6 +178,6 @@ export const projects: ProjectType[] = [
     githubLink: 'https://github.com/blombergalex/song-game',
     websiteLink: 'https://blombergalex.github.io/song-game/',
     favourite: false,
-    techs: ['HTML', 'CSS', 'JavaScript'],
+    techs: ['HTML', 'CSS', 'JavaScript', 'Github Pages'],
   },
 ]
